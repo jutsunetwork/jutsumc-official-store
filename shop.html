@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JutsuMC Shop</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: radial-gradient(circle at top, #0f2027, #000);
+  color: white;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+/* HERO */
+.hero {
+  padding: 55px 15px;
+  border-bottom: 2px solid cyan;
+}
+
+.hero h1 {
+  color: cyan;
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  text-shadow: 0 0 12px cyan;
+}
+
+.nav {
+  margin-top: 10px;
+}
+
+.btn {
+  margin: 5px;
+  padding: 10px 14px;
+  background: cyan;
+  border: none;
+  color: black;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: orange;
+  transform: scale(1.05);
+}
+
+/* SECTION */
+.section {
+  padding: 35px 15px;
+}
+
+.section h2 {
+  color: cyan;
+  margin-bottom: 18px;
+  text-shadow: 0 0 10px cyan;
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* CARD */
+.card {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(0,255,255,0.2);
+  border-radius: 12px;
+  padding: 16px;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 15px cyan;
+}
+
+.card h3 {
+  color: cyan;
+}
+
+.text {
+  margin: 5px 0;
+  font-size: 0.95rem;
+}
+
+/* BUY BUTTON */
+button.buy {
+  margin-top: 10px;
+  padding: 10px;
+  width: 100%;
+  max-width: 180px;
+  background: cyan;
+  border: none;
+  color: black;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button.buy:hover {
+  background: orange;
+}
+
+/* INFO BOX */
+.info {
+  max-width: 850px;
+  margin: auto;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(0,255,255,0.2);
+  padding: 16px;
+  border-radius: 12px;
+  line-height: 1.6;
+}
+
+/* FOOTER */
+footer {
+  margin-top: 25px;
+  padding: 15px;
+  background: #000;
+  border-top: 1px solid #222;
+  font-size: 0.9rem;
+}
+
+a {
+  color: cyan;
+  text-decoration: none;
+}
+
+a:hover {
+  color: orange;
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  button.buy {
+    max-width: 100%;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header class="hero">
+  <h1>🔥 JUTSU MC SHOP</h1>
+
+  <div class="nav">
+    <a href="index.html"><button class="btn">🏠 Home</button></a>
+    <a href="https://discord.gg/CmBmpdN268" target="_blank">
+      <button class="btn">💬 Discord</button>
+    </a>
+  </div>
+</header>
+
+<!-- KITS -->
+<section class="section">
+  <h2>⚔️ Premium ranks to unlock Kits (Economy)</h2>
+
+  <div class="grid">
+
+    <div class="card">
+      <h3>💖 SORCERER</h3>
+      <p class="text">💰 1.5M </p>
+      <p class="text">💳 ₹199 Donation</p>
+      <button class="buy" onclick="buy()">Buy</button>
+    </div>
+
+    <div class="card">
+      <h3>🌸 HASHIRA (KIT UPCOMING)</h3>
+      <p class="text">💰 2.5M </p>
+      <p class="text">💳 ₹399 Donation</p>
+      <button class="buy" onclick="buy()">Buy</button>
+    </div>
+
+    <div class="card">
+      <h3>🔵 JONIN</h3>
+      <p class="text">💰 3.5M </p>
+      <p class="text">💳 ₹499 Donation</p>
+      <button class="buy" onclick="buy()">Buy</button>
+    </div>
+
+    <div class="card">
+      <h3>⚡ KAGEM</h3>
+      <p class="text">💰 5M</p>
+      <p class="text">💳 ₹599 Donation</p>
+      <button class="buy" onclick="buy()">Buy</button>
+    </div>
+
+    <div class="card">
+      <h3>👁SPECIALGRADE</h3>
+      <p class="text">💰 7M </p>
+      <p class="text">💳 ₹749 Donation</p>
+      <button class="buy" onclick="buy()">Buy</button>
+    </div>
+
+    <div class="card">
+      <h3>👁UCHIHA (KIT UPCOMING)</h3>
+      <p class="text">💰 10M </p>
+      <p class="text">💳 ₹999 Donation</p>
+      <button class="buy" onclick="buy()">Buy</button>
+    </div>
+
+  </div>
+</section>
+
+<!-- HOW TO BUY (FINAL PRO VERSION) -->
+<section class="section">
+  <h2>🛒 How to Buy (Step Guide)</h2>
+
+  <div class="grid">
+
+    <div class="card">
+      <h3>1️⃣ Join Discord</h3>
+      <p class="text">Join official JutsuMC server</p>
+    </div>
+
+    <div class="card">
+      <h3>2️⃣ Verify</h3>
+      <p class="text">Complete verification to access shop</p>
+    </div>
+
+    <div class="card">
+      <h3>3️⃣ Open Ticket</h3>
+      <p class="text">Create purchase ticket in support</p>
+    </div>
+
+    <div class="card">
+      <h3>4️⃣ Choose Item</h3>
+      <p class="text">Select Rank you want</p>
+    </div>
+
+    <div class="card">
+      <h3>5️⃣ Payment</h3>
+      <p class="text">💰 E_sewa !!more soon!!</p>
+    </div>
+
+    <div class="card">
+      <h3>6️⃣ Confirmation</h3>
+      <p class="text">Staff will confirm your order</p>
+    </div>
+
+    <div class="card">
+      <h3>7️⃣ Delivery</h3>
+      <p class="text">Item activated in-game within minutes</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- INFO -->
+<section class="section">
+  <h2>⚠ Important</h2>
+
+  <div class="info">
+    🥷 Ranks = Discord activity (messages + invites)<br>
+    💰 Coins = In-game grind currency<br>
+    💳 Donation = Real money support <br>
+    ⚡ Grinding is required for progression
+ REAL MONEY provides you the access of that kit. You are required to have listed ingame money to buy !!!
+  </div>
+</section>
+
+<footer>
+  <p>Created by <b>JutsuMC Team</b></p>
+</footer>
+
+<script>
+function buy() {
+  window.open("https://discord.gg/CmBmpdN268");
+}
+</script>
+
+</body>
+</html>
